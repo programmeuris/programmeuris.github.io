@@ -1,0 +1,41 @@
+// generated from bg img using coolors
+$col-primary: #160610;
+$col-extra: #98B2FF;
+$col-ternary: #40608B;
+$col-quarterly: #9C3862;
+$col-quintorsomething: #FE7AD7;
+$col-secondary: #f8d643;
+$col-white: #fff;
+
+$show-home-img: true;
+$home-img: url("../img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg");
+$background-alpha: 0.9;
+
+
+
+@mixin ease_out {
+    transition: all 0.5s ease-out;
+}
+
+@mixin background {
+    @if $show-home-img {
+        &#bg-img {
+            background: $home-img;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+
+            // pseudo element overlay
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba(lighten($col-primary, 2), $background-alpha);
+            }
+        }
+    }
+}

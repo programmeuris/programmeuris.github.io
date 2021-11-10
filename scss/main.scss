@@ -1,5 +1,78 @@
-$primary-color: #444;
+@use 'dev';
+
+// selects everything
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background: $primary-color;
+    @include dev.background;
+    background: dev.$col-primary;
+    color: dev.$col-white;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+// Headers, as in the tags
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-header {
+        font-size: 5rem;
+    }
+
+    &.sm-header {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten(dev.$col-primary, 2), 0.5);
+    }
+}
+
+// Links
+a {
+    color: dev.$col-white;
+    text-decoration: none;
+}
+
+// Site Header
+header {
+    position: fixed;
+    z-index: 2; // bigger is closer to you
+    width: 100;
+}
+
+.txt-secondary {
+    color: dev.$col-secondary;
+}
+
+main {
+    padding: 4rem;
+    height: 100%;
+
+    // children with socials class
+    .socials {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: dev.$col-secondary;
+                @include dev.ease_out();
+            }
+        }
+    }
+
+    // main tag with home id
+    &#home {
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh; // viewport height (max 100 i think)
+        }
+    }
 }
