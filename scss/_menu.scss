@@ -15,4 +15,34 @@
         background: dev.$col-white;
         @include dev.ease_out;
     }
+
+    // Morph hamburger to x shape
+    // kill middle element, spin other 2 into echother
+    &.close {
+        //transform: rotate(180deg);
+        //transition-delay: 10ms;
+
+        .btn-line {
+            // rotate line 1
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+                transition-timing-function: ease-in;
+                transition-duration: 120ms;
+                transition-delay: 40ms;
+            }
+
+            // hide line 2
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            // rotate line 3
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+                transition-timing-function: ease-in;
+                transition-duration: 120ms;
+                transition-delay: 70ms;
+            }
+        }
+    }
 }

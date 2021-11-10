@@ -13,6 +13,21 @@
   background: #fff;
   transition: all 0.5s ease-out;
 }
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition-timing-function: ease-in;
+  transition-duration: 120ms;
+  transition-delay: 40ms;
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+  transition-timing-function: ease-in;
+  transition-duration: 120ms;
+  transition-delay: 70ms;
+}
 
 * {
   box-sizing: border-box;

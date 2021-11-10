@@ -1,17 +1,17 @@
 // generated from bg img using coolors
 $col-primary: #160610;
-$col-extra: #98B2FF;
+$col-secondary: #f8d643;
 $col-ternary: #40608B;
 $col-quarterly: #9C3862;
-$col-quintorsomething: #FE7AD7;
-$col-secondary: #f8d643;
+$col-quintorsomething: #98B2FF;
+
+$col-extra: #FE7AD7;
 $col-white: #fff;
+$col-red: red;
 
 $show-home-img: true;
 $home-img: url("../img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg");
 $background-alpha: 0.9;
-
-
 
 @mixin ease_out {
     transition: all 0.5s ease-out;
