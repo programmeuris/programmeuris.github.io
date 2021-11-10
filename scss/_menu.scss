@@ -1,0 +1,18 @@
+@use 'dev';
+// Hamburger
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    @include dev.ease_out;
+
+    .btn-line {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: dev.$col-white;
+        @include dev.ease_out;
+    }
+}

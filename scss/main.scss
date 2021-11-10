@@ -1,4 +1,5 @@
 @use 'dev';
+@use 'menu';
 
 // selects everything
 * {
@@ -43,7 +44,7 @@ a {
 header {
     position: fixed;
     z-index: 2; // bigger is closer to you
-    width: 100;
+    width: 100%;
 }
 
 .txt-secondary {
