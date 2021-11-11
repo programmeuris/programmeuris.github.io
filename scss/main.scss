@@ -51,6 +51,13 @@ header {
     color: dev.$col-secondary;
 }
 
+.glow {
+    &:hover {
+        color: dev.$col-quintorsomething;
+        @include dev.ease_out(dev.$easeout-mega);
+    }
+}
+
 main {
     padding: 4rem;
     height: 100%;
@@ -63,8 +70,8 @@ main {
             padding: 0.4rem;
 
             &:hover {
-                color: dev.$col-secondary;
-                @include dev.ease_out();
+                color: dev.$col-ternary;
+                @include dev.ease_out(dev.$easeout-reg);
             }
         }
     }

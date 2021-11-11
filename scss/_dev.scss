@@ -11,10 +11,14 @@ $col-red: red;
 
 $show-home-img: true;
 $home-img: url("../img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg");
-$background-alpha: 0.9;
+$pasfoto: url("../img/pasfoto.png");
+$background-alpha: 0.8;
+$menu-alpha: 0.8;
+$easeout-reg: 169ms;
+$easeout-mega: 10000ms;
 
-@mixin ease_out {
-    transition: all 0.5s ease-out;
+@mixin ease_out($ms) {
+    transition: all $ms ease-out;
 }
 
 @mixin background {

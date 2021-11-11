@@ -6,14 +6,14 @@
     right: 35px;
     top: 35px;
     cursor: pointer;
-    @include dev.ease_out;
+    @include dev.ease_out(dev.$easeout-reg);
 
     .btn-line {
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
         background: dev.$col-white;
-        @include dev.ease_out;
+        @include dev.ease_out(dev.$easeout-reg);
     }
 
     // Morph hamburger to x shape
@@ -33,6 +33,7 @@
 
             // hide line 2
             &:nth-child(2) {
+                transform: rotate(360deg);
                 opacity: 0;
             }
 
@@ -43,6 +44,72 @@
                 transition-duration: 120ms;
                 transition-delay: 70ms;
             }
+        }
+    }
+}
+
+// Menu Overlay
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-brand,
+    &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    // Menu side
+    &-nav {
+        margin: 0;
+        padding: 0;
+        opacity: dev.$menu-alpha;
+        background: darken(dev.$col-primary, 1);
+        list-style: none;
+        transform: translate3d(100%, 0, 0);
+        @include dev.ease_out(dev.$easeout-reg);
+
+        &.show {
+            // Slide in from top, comes up from -100% set above
+            transform: translate3d(0, 0, 0);
+        }
+
+        // .nav-item {
+
+        // }
+    }
+
+    // Brand side
+    &-brand {
+        //background: dev.$col-primary;
+        transform: translate3d(-100%, 0, 0);
+        @include dev.ease_out(dev.$easeout-reg);
+
+        &.show {
+            // Slide in from top, comes down from 100% set above
+            transform: translate3d(0, 0, 0);
+        }
+
+        .pasfoto {
+            width: 250px;
+            height: 250px;
+            background: dev.$pasfoto;
+            background-position: center;
+            background-size: contain;
+            border-radius: 50%;
+            border: solid 3px dev.$col-secondary;
         }
     }
 }
