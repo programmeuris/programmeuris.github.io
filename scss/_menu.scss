@@ -1,4 +1,4 @@
-@use 'dev';
+@use 'dev';   // last i did was change menu items to uppercase 17:10 in vid
 // Hamburger
 .menu-btn {
     position: absolute;
@@ -33,6 +33,7 @@
 
             // hide line 2
             &:nth-child(2) {
+                transition-delay: 5ms;
                 transform: rotate(360deg);
                 opacity: 0;
             }
@@ -78,7 +79,7 @@
         opacity: dev.$menu-alpha;
         background: darken(dev.$col-primary, 1);
         list-style: none;
-        transform: translate3d(100%, 0, 0);
+        transform: translate3d(0, -100%, 0);
         @include dev.ease_out(dev.$easeout-reg);
 
         &.show {
@@ -86,19 +87,38 @@
             transform: translate3d(0, 0, 0);
         }
 
-        // .nav-item {
+        .nav-item {
+            // transform: translate3d(600px, 0, 0);
+            // @include dev.ease_out(dev.$easeout-reg);
 
-        // }
+            // &.show {
+            //     // Slide in
+            //     transition-delay: 69ms;
+            //     transform: translate3d(0, 0, 0);
+            // }
+
+            a.nav-link {
+                display: inline-block;
+                position: relative;
+                font-size: 30px;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: dev.$col-ternary;
+                    @include dev.ease_out(dev.$easeout-reg);
+                }
+            }
+        }
     }
 
     // Brand side
     &-brand {
         //background: dev.$col-primary;
-        transform: translate3d(-100%, 0, 0);
+        transform: translate3d(0, 100%, 0);
         @include dev.ease_out(dev.$easeout-reg);
 
         &.show {
-            // Slide in from top, comes down from 100% set above
+            // slide in
             transform: translate3d(0, 0, 0);
         }
 
@@ -113,3 +133,10 @@
         }
     }
 }
+
+// // delay slide animation
+// @for $i from 1 to 6 {
+//     .nav-item:nth-child(#{$i}) {
+//         transition-delay: $i * 0.1s;
+//     }
+// }

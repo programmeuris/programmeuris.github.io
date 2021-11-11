@@ -7,13 +7,15 @@ const navItems = document.querySelectorAll('.nav-item');
 
 // Set Initial Menu State
 let showMenu = false;
+// advanced version
+let menuState = 0;
 
 menuBtn.addEventListener('click', function() {
     toggleMenu();
 });
 
 const toggleMenu = () => {
-    if(!showMenu) {
+    if (!showMenu) {
         menuBtn.classList.add('close');
         menu.classList.add('show');
         menuNav.classList.add('show');
@@ -28,4 +30,8 @@ const toggleMenu = () => {
     }
 
     showMenu = !showMenu;
+}
+
+const toggleMenuExtra = () => {
+    // if(menuS)
 }

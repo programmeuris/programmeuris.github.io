@@ -20,6 +20,7 @@
   transition-delay: 40ms;
 }
 .menu-btn.close .btn-line:nth-child(2) {
+  transition-delay: 5ms;
   transform: rotate(360deg);
   opacity: 0;
 }
@@ -55,14 +56,24 @@
   opacity: 0.8;
   background: #12050d;
   list-style: none;
-  transform: translate3d(100%, 0, 0);
+  transform: translate3d(0, -100%, 0);
   transition: all 169ms ease-out;
 }
 .menu-nav.show {
   transform: translate3d(0, 0, 0);
 }
+.menu-nav .nav-item a.nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.menu-nav .nav-item a.nav-link:hover {
+  color: #577db2;
+  transition: all 169ms ease-out;
+}
 .menu-brand {
-  transform: translate3d(-100%, 0, 0);
+  transform: translate3d(0, 100%, 0);
   transition: all 169ms ease-out;
 }
 .menu-brand.show {
@@ -141,11 +152,6 @@ header {
   color: #f8d643;
 }
 
-.glow:hover {
-  color: #98B2FF;
-  transition: all 10000ms ease-out;
-}
-
 main {
   padding: 4rem;
   height: 100%;
@@ -157,7 +163,7 @@ main .socials a {
   padding: 0.4rem;
 }
 main .socials a:hover {
-  color: #40608B;
+  color: #577db2;
   transition: all 169ms ease-out;
 }
 main#home {
