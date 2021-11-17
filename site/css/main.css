@@ -13,6 +13,10 @@
   background: #fff;
   transition: all 169ms ease-out;
 }
+.menu-btn.close .btn-line {
+  background-color: #9C3862;
+  transition: all 169ms ease-out;
+}
 .menu-btn.close .btn-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
   transition-timing-function: ease-in;
@@ -62,14 +66,22 @@
 .menu-nav.show {
   transform: translate3d(0, 0, 0);
 }
-.menu-nav .nav-item a.nav-link {
+.menu-nav .nav-item .nav-link {
   display: inline-block;
   position: relative;
   font-size: 30px;
   text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
 }
-.menu-nav .nav-item a.nav-link:hover {
+.menu-nav .nav-item .nav-link:hover {
   color: #577db2;
+  transition: all 169ms ease-out;
+}
+.menu-nav .nav-item .nav-link.active {
+  color: #f8d643;
   transition: all 169ms ease-out;
 }
 .menu-brand {

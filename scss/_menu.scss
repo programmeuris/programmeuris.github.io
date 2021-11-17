@@ -23,6 +23,9 @@
         //transition-delay: 10ms;
 
         .btn-line {
+            background-color: dev.$col-quarterly;
+            @include dev.ease_out(dev.$easeout-reg);
+
             // rotate line 1
             &:nth-child(1) {
                 transform: rotate(45deg) translate(5px, 5px);
@@ -97,14 +100,24 @@
             //     transform: translate3d(0, 0, 0);
             // }
 
-            a.nav-link {
+            .nav-link {
                 display: inline-block;
                 position: relative;
                 font-size: 30px;
                 text-transform: uppercase;
+                padding: 1rem 0;
+                font-weight: 300;
+                color: dev.$col-white;
+                // just use white as standard text color on dark stuff
+                text-decoration: none;
 
                 &:hover {
                     color: dev.$col-ternary;
+                    @include dev.ease_out(dev.$easeout-reg);
+                }
+
+                &.active {
+                    color: dev.$col-secondary;
                     @include dev.ease_out(dev.$easeout-reg);
                 }
             }
