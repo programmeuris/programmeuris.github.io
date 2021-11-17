@@ -12,6 +12,7 @@ $col-red: red;
 $show-home-img: true;
 $home-img: url("../img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg");
 $pasfoto: url("../img/pasfoto.png");
+$pasfoto_sm: url("../img/pasfoto_sm.png");
 $background-alpha: 0.8;
 $menu-alpha: 0.8;
 $easeout-reg: 169ms;
@@ -40,5 +41,31 @@ $easeout-reg: 169ms;
                 background: rgba(lighten($col-primary, 2), $background-alpha);
             }
         }
+    }
+}
+
+// Media query mixins
+@mixin media_sm {
+    @media screen and (max-width: 500px) {
+        // only applies if screen is 500px or less
+        @content;
+    }
+}
+
+@mixin media_md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media_lg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin media_xl {
+    @media screen and (min-width: 1171px) {
+        @content;
     }
 }
