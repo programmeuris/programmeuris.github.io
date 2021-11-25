@@ -39,6 +39,12 @@ h3 {
 a {
     color: dev.$col-white;
     text-decoration: none;
+
+    &:hover {
+        color: dev.$col-ternary;
+        text-decoration: underline;
+        @include dev.ease_out(dev.$easeout-reg);
+    }
 }
 
 // Site Header

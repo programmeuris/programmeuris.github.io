@@ -168,7 +168,7 @@ body#bg-img {
 }
 body#bg-img:after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
@@ -199,6 +199,11 @@ h3.sm-header {
 a {
   color: #fff;
   text-decoration: none;
+}
+a:hover {
+  color: #b7c9ff;
+  text-decoration: underline;
+  transition: all 169ms ease-out;
 }
 
 header {
