@@ -188,6 +188,26 @@ h2.lg-header,
 h3.lg-header {
   font-size: 5rem;
 }
+h1.lg-header.lg-name-fix.show,
+h2.lg-header.lg-name-fix.show,
+h3.lg-header.lg-name-fix.show {
+  display: block;
+}
+h1.lg-header.lg-name-fix.hide,
+h2.lg-header.lg-name-fix.hide,
+h3.lg-header.lg-name-fix.hide {
+  display: none;
+}
+h1.lg-header.md-name-fix.show,
+h2.lg-header.md-name-fix.show,
+h3.lg-header.md-name-fix.show {
+  display: block;
+}
+h1.lg-header.md-name-fix.hide,
+h2.lg-header.md-name-fix.hide,
+h3.lg-header.md-name-fix.hide {
+  display: none;
+}
 h1.sm-header,
 h2.sm-header,
 h3.sm-header {

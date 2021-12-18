@@ -26,6 +26,28 @@ h3 {
 
     &.lg-header {
         font-size: 5rem;
+
+        &.lg-name-fix {
+
+            &.show {
+                display: block;
+            }
+
+            &.hide {
+                display: none;
+            }
+        }
+
+        &.md-name-fix {
+
+            &.show {
+                display: block;
+            }
+
+            &.hide {
+                display: none;
+            }
+        }
     }
 
     &.sm-header {
