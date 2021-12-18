@@ -63,6 +63,14 @@ a {
     color: dev.$col-white;
     text-decoration: none;
 
+    &.underline {
+        text-decoration: underline;
+    }
+
+    &.social {
+        color: dev.$col-quarterly;
+    }
+
     &:hover {
         color: dev.$col-ternary;
         text-decoration: underline;
@@ -85,23 +93,13 @@ header {
     color: dev.$col-ternary;
 }
 
+.txt-quarterly {
+    color: dev.$col-quarterly
+}
+
 main {
     padding: 4rem;
     height: 100%;
-
-    // children with socials class
-    .socials {
-        margin-top: 1rem;
-
-        a {
-            padding: 0.4rem;
-
-            &:hover {
-                color: dev.$col-ternary;
-                @include dev.ease_out(dev.$easeout-reg);
-            }
-        }
-    }
 
     // main tag with home id
     &#home {
@@ -111,3 +109,15 @@ main {
         }
     }
 }
+
+// bootstrap customization
+.card-body {
+    background-color: rgba(dev.$col-primary, 0.9);
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+  }

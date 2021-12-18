@@ -1,3 +1,4 @@
+// generated from bg img using coolors
 $col-primary: #160610;
 $col-secondary: #f8d643;
 $col-ternary: lighten(#98B2FF, 6);
@@ -8,12 +9,26 @@ $col-extra: #FE7AD7;
 $col-white: #fff;
 $col-red: red;
 
+$theme-colors: (
+    primary: $col-primary,
+    secondary: $col-secondary,
+//  success: $col-ternary,
+//   info: $info,
+//   warning: $warning,
+//   danger: $danger,
+   //light: $col_primary,
+   //dark: $col_secondary,
+//   // add any additional color below
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
 $show-home-img: true;
 $home-img: url("../img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg");
 $pasfoto: url("../img/pasfoto.png");
 $pasfoto_sm: url("../img/pasfoto_sm.png");
 $background-alpha: 0.8;
-$menu-alpha: 0.8;
+$menu-alpha: 0.9;
 $easeout-reg: 169ms;
 
 @mixin ease_out($ms) {
