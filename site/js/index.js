@@ -1,6 +1,10 @@
 // title fix
+// selecteer het element dat moet kunnen verdwijnen op klein scherm
 const large = document.querySelector(".lg-name-fix");
+// selecteer element dat in de plaats moet komen op klein scherm
 const med = document.querySelector(".md-name-fix");
+
+// stel in van welke breedte dit moet gebeuren
 var mql = window.matchMedia('(max-width: 768px)');
 
 mql.onchange = (e) => {
@@ -9,14 +13,14 @@ mql.onchange = (e) => {
     large.classList.remove('show');
     med.classList.add('show');
     med.classList.remove('hide');
-    //console.log('This is a narrow screen — less than 500px wide.')
+    //console.log('This is a narrow screen — less than 678x wide.')
   } else {
     large.classList.add('show');
     large.classList.remove('hide');
     med.classList.add('hide');
     med.classList.remove('show');
     /* the viewport is more than than 768 pixels wide */
-    //console.log('This is a wide screen — more than 500px wide.')
+    //console.log('This is a wide screen — more than 678px wide.')
   }
 }
 
