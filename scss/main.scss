@@ -125,3 +125,25 @@ main {
     background-color: #e9ecef;
     border-radius: .3rem;
   }
+
+// extra
+img.hobby {
+    display: block;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    object-fit: scale-down;
+}
+
+div.c-t-a {
+    width: 250px;
+    height: 250px;
+    min-width: 250px;
+    min-height: 250px;
+    background: dev.$rosie;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: solid 3px dev.$col-secondary;
+}

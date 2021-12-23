@@ -30,6 +30,7 @@ $pasfoto_sm: url("../img/pasfoto_sm.png");
 $background-alpha: 0.8;
 $menu-alpha: 0.9;
 $easeout-reg: 169ms;
+$rosie: url("../img/rosie.png");
 
 @mixin ease_out($ms) {
     transition: all $ms ease-out;

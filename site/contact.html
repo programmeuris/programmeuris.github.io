@@ -42,7 +42,48 @@
         </ul>
       </nav>
     </header>
-    <main id="home"></main>
+    <main id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <form method="post">
+              <div class="mb-3">
+                <label for="frm-mail" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="frm-mail"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="frm-name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="frm-name" />
+              </div>
+              <div class="mb-3 form-check">
+                <label for="frm-text"></label>
+                <textarea
+                  class="form-control"
+                  id="frm-text"
+                  rows="5"
+                ></textarea>
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="frm-agree"
+                />
+                <label class="form-check-label" for="frm-agree"
+                  >Agree to my terms and conditions</label
+                >
+              </div>
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer>
       <div class="container">
         <div class="row">
