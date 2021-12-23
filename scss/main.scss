@@ -135,6 +135,15 @@ img.hobby {
     object-fit: scale-down;
 }
 
+img.im-card {
+    display: block;
+    max-height: 300px;
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    object-fit: scale-down;
+}
+
 div.c-t-a {
     width: 250px;
     height: 250px;
