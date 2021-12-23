@@ -10747,6 +10747,10 @@ a:hover {
   transition: all 169ms ease-out;
 }
 
+i.ico-lrg {
+  font-size: 10rem;
+}
+
 header {
   position: fixed;
   z-index: 2;
